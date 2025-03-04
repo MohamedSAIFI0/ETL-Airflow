@@ -3,7 +3,7 @@ import pandas as pd
 def transform_data():
     df = pd.read_csv(r"C:\Users\P15\Desktop\ETL-Finance\Data\stock_data.csv")
     
-    # Clean data
+
     df.dropna(inplace=True)
     df['Date'] = pd.to_datetime(df['Date'])
     df.rename(columns={'Close': 'Closing_Price'}, inplace=True)
